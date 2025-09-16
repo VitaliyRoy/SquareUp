@@ -1,0 +1,84 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/barlow-v13-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/barlow-v13-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/barlow-v13-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/barlow-v13-latin-700.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/barlow-v13-latin-800.woff2') format('woff2');
+}
+
+:root {
+  --absolute-white: #fff;
+  --absolute-black: #000;
+  --green-50: #9eff00;
+  --green-60: #b1ff33;
+  --green-70: #c5ff66;
+  --green-80: #d8ff99;
+  --green-90: #ecffcc;
+  --green-95: #f5ffe5;
+  --green-97: #f9fff0;
+  --green-99: #fdfffa;
+  --grey-10: #1a1a1a;
+  --grey-15: #262626;
+  --grey-20: #333;
+  --grey-30: #4c4c4d;
+  --grey-35: #59595a;
+  --grey-40: #656567;
+  --grey-60: #98989a;
+  --grey-90: #e6e6e6;
+}
+
+/*base*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Barlow';
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--grey-90);
+  background-color: var(--grey-10);
+  margin: 0;
+}
+
+/*container*/
+.container {
+  width: 100%;
+  max-width: 1644px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
