@@ -75,6 +75,16 @@ body {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -84,6 +94,12 @@ ul {
 a {
   display: inline-block;
   text-decoration: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  object-fit: cover;
 }
 
 /*button*/
@@ -97,6 +113,7 @@ a {
   border: none;
   border-radius: 8px;
   padding: 0.889rem 1.333rem;
+  cursor: pointer;
 }
 
 /*container*/
@@ -105,6 +122,30 @@ a {
   max-width: 91.333rem;
   margin: 0 auto;
   padding: 0 1.333rem;
+}
+
+/*border*/
+.border {
+  border: 1px solid var(--grey-15);
+  border-top: none;
+}
+
+/*section-header*/
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 6.667rem 0;
+
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 0.778rem;
+  }
+
+  &__text {
+    line-height: 133%;
+    letter-spacing: -0.01em;
+  }
 }
 
 /*header*/
@@ -154,18 +195,165 @@ a {
   }
 }
 
-// .k {
-//   position: relative;
-//   background-image: url(../images/qwe.png);
-//   width: 1596px;
-//   height: 796px;
-// }
+/*hero-section*/
+.hero-section {
+  &__first-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6.222rem 0 15.222rem 0;
+    background-image: url('../images/hero-section-bg.png');
+  }
 
-// .k::before {
-//   position: absolute;
-//   content: '';
-//   width: 1596px;
-//   height: 336px;
-//   background-image: url(../images/one.png);
-//   mix-blend-mode: soft-light;
-// }
+  &__title {
+    max-width: 712px;
+    font-weight: 600;
+    font-size: 68px;
+    text-align: center;
+    color: var(--absolute-white);
+    margin-bottom: 2.222rem;
+  }
+
+  &__text-container {
+    padding: 1.944rem 2.222rem;
+    backdrop-filter: blur(4px);
+    background: rgba(36, 36, 36, 0.2);
+    border: 1px solid var(--grey-15);
+    border-radius: 12px;
+    font-size: 22px;
+    color: var(--grey-60);
+    margin-bottom: 2.778rem;
+  }
+
+  &__accented-text {
+    padding: 0.667rem 0.778rem;
+    color: var(--absolute-white);
+    background-color: var(--grey-15);
+    border-radius: 8px;
+  }
+
+  &__buttons-container {
+    display: flex;
+    gap: 0.722rem;
+  }
+
+  &__button {
+    padding: 0.944rem 1.5rem;
+    line-height: 122%;
+    border-radius: 10px;
+
+    &.transparent {
+      backdrop-filter: blur(4px);
+      background: rgba(36, 36, 36, 0.2);
+      border: 1px solid var(--grey-20);
+      color: var(--absolute-white);
+    }
+  }
+
+  &__second-container {
+    position: relative;
+    padding: 2.222rem 0;
+    background-color: rgba(36, 36, 36, 0.2);
+  }
+
+  &__additional-text-container {
+    position: absolute;
+    justify-self: center;
+    top: -1.778rem;
+    font-weight: 500;
+    color: var(--green-99);
+    border: 1px solid var(--grey-15);
+    border-radius: 100px;
+    background-color: var(--grey-10);
+    padding: 1.056rem 1.833rem;
+  }
+
+  &__img-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.111rem;
+
+    & li {
+      max-height: 5rem;
+    }
+  }
+
+  &__img {
+    max-width: 13.852rem;
+    height: 5rem;
+  }
+}
+
+/*services-section*/
+.services-section {
+  &__bg {
+    position: relative;
+    background-image: url('../images/services-section-bg1.png');
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 88.667rem;
+      height: 18.667rem;
+      background-image: url(../images/services-section-bg2.png);
+      mix-blend-mode: soft-light;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+
+    & li {
+      min-height: 32.056rem;
+      max-width: 29.556rem;
+      width: 100%;
+      border-right: 1px solid var(--grey-15);
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.111rem;
+    height: 100%;
+    padding: 2.778rem;
+    line-height: 133%;
+    letter-spacing: -0.01em;
+
+    &__img {
+      margin-bottom: 2.222rem;
+      width: 4.889rem;
+      height: 4.889rem;
+    }
+
+    &__title {
+      margin-bottom: 1.111rem;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 150%;
+      color: var(--absolute-white);
+    }
+
+    &__text {
+      max-width: 23.778rem;
+    }
+
+    &__link {
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 500;
+      border-radius: 8px;
+      color: var(--absolute-white);
+      background-color: var(--grey-15);
+    }
+  }
+}
