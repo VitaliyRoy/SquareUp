@@ -116,6 +116,11 @@ img {
   cursor: pointer;
 }
 
+/*icon*/
+.icon {
+  fill: var(--absolute-white);
+}
+
 /*container*/
 .container {
   width: 100%;
@@ -152,6 +157,10 @@ img {
     font-size: 48px;
     font-weight: 600;
     margin-bottom: 0.778rem;
+
+    &.smaller-margin {
+      margin-bottom: 0.556rem;
+    }
   }
 
   &__text {
@@ -420,7 +429,7 @@ img {
 /*reviews-section*/
 .reviews-section {
   &__bg {
-    background-image: url('../images/section-header-bg-small.png');
+    background-image: url('../images/section-header-bg-medium.png');
 
     &::before {
       height: 20.333rem;
@@ -502,6 +511,78 @@ img {
       color: var(--absolute-white);
       border-radius: 8px;
       background-color: var(--grey-15);
+    }
+  }
+}
+
+/*questions-section*/
+.questions-section {
+  &__bg {
+    background-image: url('../images/section-header-bg-small.png');
+
+    &::before {
+      background-image: url('../images/questions-section-bg.png');
+    }
+  }
+
+  &__second-container {
+    display: flex;
+    min-height: 46.333rem;
+  }
+
+  &__small-container {
+    width: 100%;
+    padding-top: 4.444rem;
+    border-left: 1px solid var(--grey-15);
+    border-right: 1px solid var(--grey-15);
+    border-bottom: 1px solid var(--grey-15);
+
+    &.right {
+      border-left: none;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.667rem;
+    padding: 1.611rem 2.778rem 1.667rem 2.778rem;
+    border-top: 1px solid var(--grey-15);
+
+    &.last {
+      border-bottom: 1px solid var(--grey-15);
+    }
+
+    &__title-container {
+      display: flex;
+      align-items: center;
+      gap: 1.667rem;
+    }
+
+    &__number-container {
+      padding: 1.111rem;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+    }
+
+    &__number {
+      text-align: center;
+      width: 2.222rem;
+      height: 2.222rem;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--absolute-white);
+    }
+
+    &_title {
+      max-width: 29.667rem;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 150%;
+      color: var(--absolute-white);
     }
   }
 }
