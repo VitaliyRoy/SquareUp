@@ -119,6 +119,7 @@ img {
 /*icon*/
 .icon {
   fill: var(--absolute-white);
+  transition: fill 0.3s;
 }
 
 /*container*/
@@ -527,12 +528,11 @@ img {
 
   &__second-container {
     display: flex;
-    min-height: 46.333rem;
   }
 
   &__small-container {
     width: 100%;
-    padding-top: 4.444rem;
+    padding: 4.444rem 0 4.444rem;
     border-left: 1px solid var(--grey-15);
     border-right: 1px solid var(--grey-15);
     border-bottom: 1px solid var(--grey-15);
@@ -543,16 +543,20 @@ img {
   }
 
   &__card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.667rem;
     padding: 1.611rem 2.778rem 1.667rem 2.778rem;
     border-top: 1px solid var(--grey-15);
+    cursor: pointer;
 
     &.last {
       border-bottom: 1px solid var(--grey-15);
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.667rem;
     }
 
     &__title-container {
@@ -575,14 +579,74 @@ img {
       font-weight: 600;
       line-height: 150%;
       color: var(--absolute-white);
+      transition: color 0.3s;
     }
 
-    &_title {
+    &:hover .questions-section__card__number {
+      color: var(--green-50);
+    }
+
+    &__title {
       max-width: 29.667rem;
       font-size: 22px;
       font-weight: 500;
       line-height: 150%;
       color: var(--absolute-white);
+      transition: color 0.3s;
     }
+
+    &:hover .questions-section__card__title {
+      color: var(--green-70);
+    }
+
+    & .icon {
+      transition: fill 0.3s, transform 0.3s ease;
+    }
+
+    &.active .icon {
+      transform: rotate(45deg);
+    }
+
+    &:hover .icon {
+      fill: var(--green-70);
+    }
+
+    &__additional-text {
+      padding-left: 6.111rem;
+      line-height: 150%;
+
+      height: 0;
+      overflow: hidden;
+      transition: height 0.4s ease;
+    }
+  }
+}
+
+/*thank-section*/
+.thank-section {
+  &__bg {
+    background-image: url('../images/section-header-bg-big.png');
+
+    &::before {
+      height: 33.167rem;
+      background-image: url('../images/thank-section-bg2.png');
+    }
+  }
+  &__img {
+    width: 4.444rem;
+    height: 4.444rem;
+    margin: 0 auto 2.778rem;
+  }
+
+  & .section-header__title {
+    font-size: 38px;
+  }
+
+  & .section-header__text {
+    margin-bottom: 2.778rem;
+  }
+
+  & .button {
+    padding: 1rem 1.889rem;
   }
 }
