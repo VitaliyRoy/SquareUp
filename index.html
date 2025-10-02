@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SquareUp</title>
     <link rel="stylesheet" href="./css/styles.min.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -699,13 +703,13 @@
               your digital ideas to life. Here are the different ways <br />
               you can get in touch with us.
             </p>
-            <button class="button">Start Project</button>
+            <button class="thank-section__button button">Start Project</button>
           </div>
           <div class="thank-section__second-container border">
             <form class="contact-form" name="contact-form">
               <div class="contact-form__contact-inf-container">
                 <div class="contact-form__input">
-                  <label class="contact-form__input__lable" for="user-name">
+                  <label class="contact-form__titles" for="user-name">
                     Full Name
                   </label>
                   <input
@@ -717,7 +721,7 @@
                   />
                 </div>
                 <div class="contact-form__input">
-                  <label class="contact-form__input__lable" for="user-email">
+                  <label class="contact-form__titles" for="user-email">
                     Email
                   </label>
                   <input
@@ -730,7 +734,9 @@
                 </div>
               </div>
               <fieldset class="contact-form__checkbox-list">
-                <legend>Why are you contacting us?</legend>
+                <legend class="contact-form__titles">
+                  Why are you contacting us?
+                </legend>
                 <div class="contact-form_checkboxes-container">
                   <div class="contact-form__checkbox">
                     <input
@@ -751,20 +757,6 @@
                     <input
                       class="contact-form__checkbox__control"
                       type="checkbox"
-                      id="mobile-app-design"
-                      name="mobile-app-design"
-                    />
-                    <label
-                      class="contact-form__checkbox__lable"
-                      for="mobile-app-design"
-                    >
-                      Mobile App Design
-                    </label>
-                  </div>
-                  <div class="contact-form__checkbox">
-                    <input
-                      class="contact-form__checkbox__control"
-                      type="checkbox"
                       id="collaboration"
                       name="collaboration"
                     />
@@ -773,6 +765,20 @@
                       for="collaboration"
                     >
                       Collaboration
+                    </label>
+                  </div>
+                  <div class="contact-form__checkbox">
+                    <input
+                      class="contact-form__checkbox__control"
+                      type="checkbox"
+                      id="mobile-app-design"
+                      name="mobile-app-design"
+                    />
+                    <label
+                      class="contact-form__checkbox__lable"
+                      for="mobile-app-design"
+                    >
+                      Mobile App Design
                     </label>
                   </div>
                   <div class="contact-form__checkbox">
@@ -788,6 +794,33 @@
                   </div>
                 </div>
               </fieldset>
+              <div class="contact-form__budget-container">
+                <h3
+                  class="contact-form__titles contact-form__budget-container__title"
+                >
+                  Your Budget
+                </h3>
+                <p class="contact-form__budget-container__text">
+                  Slide to indicate your budget range
+                </p>
+                <div id="budget-double-slider"></div>
+              </div>
+              <div class="contact-form__message-container">
+                <h3
+                  class="contact-form__titles contact-form__message-container__title"
+                >
+                  Your Message
+                </h3>
+                <textarea
+                  class="contact-form__message-container__message"
+                  placeholder="Type here"
+                  name="user-message"
+                  id="user-message"
+                ></textarea>
+              </div>
+              <button type="submit" class="button contact-form__button">
+                Submit
+              </button>
             </form>
           </div>
         </div>
@@ -795,5 +828,7 @@
     </main>
 
     <script src="./js/questions-section__card.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="./js/budget-double-slider.js"></script>
   </body>
 </html>
