@@ -500,6 +500,10 @@ input {
     justify-content: center;
     padding-right: 2.389rem;
     gap: 1.667rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding-right: 1.0343rem;
+    }
   }
 
   &__list-link {
@@ -536,6 +540,12 @@ input {
     align-items: center;
     padding: 6.222rem 0 15.222rem 0;
     background-image: url('../images/hero-section-bg.png');
+    background-position: center center;
+
+    @media screen and (max-width: $bp-tablet) {
+      background-size: 91.4286rem 100%;
+      padding: 8rem 0 19.5714rem 0;
+    }
   }
 
   &__title {
@@ -545,6 +555,12 @@ input {
     text-align: center;
     color: var(--absolute-white);
     margin-bottom: 2.222rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 3.4286rem;
+      max-width: 35.8571rem;
+      margin-bottom: 2.1429rem;
+    }
   }
 
   &__text-container {
@@ -556,6 +572,12 @@ input {
     font-size: 1.222rem;
     color: var(--grey-60);
     margin-bottom: 2.778rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 1.2857rem;
+      padding: 1.7857rem 2.1429rem;
+      margin-bottom: 2.8571rem;
+    }
   }
 
   &__accented-text {
@@ -563,23 +585,39 @@ input {
     color: var(--absolute-white);
     background-color: var(--grey-15);
     border-radius: 8px;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 0.5714rem 0.7143rem;
+    }
   }
 
   &__buttons-container {
     display: flex;
     gap: 0.722rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      gap: 0.9286rem;
+    }
   }
 
   &__button {
     padding: 0.944rem 1.5rem;
     line-height: 122%;
     border-radius: 10px;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 0.9286rem 1.3571rem;
+    }
   }
 
   &__second-container {
     position: relative;
     padding: 2.222rem 0;
     background-color: rgba(36, 36, 36, 0.2);
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 2.1429rem 0;
+    }
   }
 
   &__additional-text-container {
@@ -592,6 +630,11 @@ input {
     border-radius: 100px;
     background-color: var(--grey-10);
     padding: 1.056rem 1.833rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 0.9286rem 1.6429rem;
+      top: -1.6429rem;
+    }
   }
 
   &__img-list {
@@ -599,14 +642,18 @@ input {
     flex-direction: row;
     gap: 1.111rem;
 
+    @media screen and (max-width: $bp-tablet) {
+      gap: 1.4286rem;
+    }
+
     & li {
       max-height: 5rem;
     }
   }
 
   &__img {
-    max-width: 13.852rem;
-    height: 5rem;
+    width: 100%;
+    height: 100%;
   }
 }
 
