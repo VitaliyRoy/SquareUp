@@ -178,17 +178,31 @@ input {
   padding: 4.4444rem;
   gap: 2.2222rem;
 
+  @media screen and (max-width: $bp-tablet) {
+    padding: 4.2857rem;
+    max-width: 60.4286rem;
+    gap: 2.1429rem;
+  }
+
   &__titles {
     font-size: 1.2222rem;
     font-weight: 500;
     line-height: 150%;
     color: var(--absolute-white);
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 1.2857rem;
+    }
   }
 
   &__contact-inf-container {
     display: flex;
     width: 100%;
     gap: 2.2222rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      gap: 2.1429rem;
+    }
   }
 
   &__input {
@@ -201,6 +215,11 @@ input {
     border: 1px solid var(--grey-15);
     border-radius: 8px;
     transition: border-color 0.3s;
+
+    @media screen and (max-width: $bp-tablet) {
+      gap: 1.1429rem;
+      border-radius: 0.4286rem;
+    }
 
     &:hover {
       border-color: var(--absolute-white);
@@ -216,6 +235,11 @@ input {
       border-bottom: 1px solid var(--grey-20);
       padding-bottom: 0.1667rem;
       transition: border-color 0.3s;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.1429rem;
+        padding-bottom: 0.4286rem;
+      }
 
       &::placeholder {
         color: var(--grey-40);
@@ -236,10 +260,18 @@ input {
     border-radius: 12px;
     background-color: rgba(36, 36, 36, 0.5);
 
+    @media screen and (max-width: $bp-tablet) {
+      padding: 6.2143rem 2.1429rem 2.1429rem;
+    }
+
     & legend {
       position: absolute;
       top: 2.2222rem;
       padding: 0;
+
+      @media screen and (max-width: $bp-tablet) {
+        top: 2.1429rem;
+      }
     }
   }
 
@@ -248,6 +280,11 @@ input {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 1.3333rem;
     column-gap: 1.1111rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      row-gap: 1.7143rem;
+      column-gap: 1.4286rem;
+    }
   }
 
   &__checkbox {
@@ -263,6 +300,12 @@ input {
       color: var(--green-99);
       padding-left: 2.1111rem;
       cursor: pointer;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.1429rem;
+        padding-left: 2.7143rem;
+        line-height: 168%;
+      }
     }
 
     &__lable::before {
@@ -276,6 +319,11 @@ input {
       width: 1.5556rem;
       height: 1.5556rem;
       transition: border-color 0.3s;
+
+      @media screen and (max-width: $bp-tablet) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
 
     &__lable:hover::before {
@@ -291,6 +339,13 @@ input {
       left: 0.2222rem;
       top: 0.1111rem;
       cursor: pointer;
+
+      @media screen and (max-width: $bp-tablet) {
+        width: 1.4286rem;
+        height: 1.4286rem;
+        left: 0.2857rem;
+        top: 0.0714rem;
+      }
     }
   }
 
@@ -300,8 +355,16 @@ input {
     border-radius: 12px;
     background-color: rgba(36, 36, 36, 0.5);
 
+    @media screen and (max-width: $bp-tablet) {
+      padding: 2.1429rem 2.1429rem 4rem;
+    }
+
     &__title {
       margin-bottom: 0.7778rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        margin-bottom: 1rem;
+      }
     }
 
     &__text {
@@ -309,6 +372,11 @@ input {
       line-height: 150%;
       letter-spacing: -0.01em;
       color: var(--grey-90);
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.1429rem;
+        margin-bottom: 4rem;
+      }
     }
   }
 
@@ -319,6 +387,10 @@ input {
     border-radius: 0;
     height: 0.2222rem;
     box-shadow: none;
+
+    @media screen and (max-width: $bp-tablet) {
+      height: 0.1429rem;
+    }
   }
 
   /* Заповнений відрізок*/
@@ -343,6 +415,11 @@ input {
     width: 1.7778rem;
     height: 1.7778rem;
     top: -0.7222rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      width: 1.4286rem;
+      height: 1.4286rem;
+    }
   }
 
   .noUi-handle:after {
@@ -351,6 +428,10 @@ input {
 
   .noUi-horizontal .noUi-tooltip {
     bottom: -83%;
+
+    @media screen and (max-width: $bp-tablet) {
+      bottom: -118%;
+    }
   }
 
   .noUi-tooltip {
@@ -371,6 +452,11 @@ input {
     height: 0.8889rem;
     border-radius: 50%;
     background: var(--green-50);
+
+    @media screen and (max-width: $bp-tablet) {
+      width: 0.8571rem;
+      height: 0.8571rem;
+    }
   }
 
   &__message-container {
@@ -380,12 +466,20 @@ input {
     background-color: rgba(36, 36, 36, 0.5);
     transition: border-color 0.3s;
 
+    @media screen and (max-width: $bp-tablet) {
+      padding: 1.4286rem 2.1429rem 1.8736rem;
+    }
+
     &:hover {
       border-color: var(--absolute-white);
     }
 
     &__title {
       margin-bottom: 1.1111rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        margin-bottom: 1.4286rem;
+      }
     }
 
     &__message {
@@ -408,6 +502,17 @@ input {
         var(--grey-20) 1.7222rem
       );
 
+      @media screen and (max-width: $bp-tablet) {
+        max-height: 4.5714rem;
+        font-size: 1.1429rem;
+        background: repeating-linear-gradient(
+          to bottom,
+          transparent,
+          transparent 1.8571rem,
+          var(--grey-20) 2rem
+        );
+      }
+
       &:focus {
         outline: none;
         border: none;
@@ -418,6 +523,10 @@ input {
   &__button {
     margin: 0 auto;
     padding: 0.9444rem 2.3889rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 0.9286rem 2.5rem;
+    }
   }
 }
 
@@ -470,6 +579,11 @@ input {
 
     &.higher {
       line-height: 150%;
+    }
+
+    &.thinner {
+      max-width: 57.1429rem;
+      margin: 0 auto;
     }
   }
 }
@@ -793,6 +907,10 @@ input {
     padding: 4.444rem;
     border-bottom: 1px solid var(--grey-15);
 
+    @media screen and (max-width: $bp-tablet) {
+      padding: 4.2857rem;
+    }
+
     &:nth-child(odd) {
       border-left: 1px solid var(--grey-15);
       border-right: 1px solid var(--grey-15);
@@ -806,6 +924,17 @@ input {
       align-items: center;
       gap: 1.111rem;
       margin-bottom: 2.222rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        margin-bottom: 2.1429rem;
+      }
+    }
+
+    &__img {
+      @media screen and (max-width: $bp-tablet) {
+        width: 5rem;
+        height: 5rem;
+      }
     }
 
     &__title {
@@ -814,6 +943,10 @@ input {
       line-height: 150%;
       letter-spacing: -0.01em;
       color: var(--absolute-white);
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.4286rem;
+      }
     }
 
     &__text {
@@ -821,6 +954,10 @@ input {
       font-size: 1.111rem;
       line-height: 150%;
       letter-spacing: -0.01em;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.1429rem;
+      }
     }
   }
 }
@@ -831,8 +968,20 @@ input {
     background-image: url('../images/section-header-bg-medium.png');
 
     &::before {
-      height: 20.333rem;
       background-image: url('../images/reviews-section-bg.png');
+    }
+
+    &__br-desktop {
+      @media screen and (max-width: $bp-tablet) {
+        display: none;
+      }
+    }
+
+    &__br-tablet {
+      display: none;
+      @media screen and (max-width: $bp-tablet) {
+        display: inline;
+      }
     }
   }
 
@@ -849,6 +998,11 @@ input {
     gap: 2.222rem;
     border-bottom: 1px solid var(--grey-15);
 
+    @media screen and (max-width: $bp-tablet) {
+      padding: 5.7143rem 4.2857rem;
+      gap: 2.1429rem;
+    }
+
     &:nth-child(odd) {
       border-left: 1px solid var(--grey-15);
       border-right: 1px solid var(--grey-15);
@@ -863,10 +1017,19 @@ input {
       line-height: 150%;
       color: var(--green-80);
       margin-bottom: 1.333rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.4286rem;
+        margin-bottom: 1.4286rem;
+      }
     }
 
     &__text {
       line-height: 150%;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.1429rem;
+      }
     }
 
     &__commentator-container {
@@ -879,10 +1042,18 @@ input {
       border-radius: 8px;
       background-color: rgba(36, 36, 36, 0.2);
 
+      @media screen and (max-width: $bp-tablet) {
+        padding: 1rem;
+      }
+
       & {
         > div {
           display: flex;
           gap: 1rem;
+
+          @media screen and (max-width: $bp-tablet) {
+            gap: 0.8571rem;
+          }
         }
       }
     }
@@ -890,6 +1061,11 @@ input {
     &__img {
       width: 3.333rem;
       height: 3.333rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        width: 3.5714rem;
+        height: 3.5714rem;
+      }
     }
 
     &__name {
@@ -897,10 +1073,18 @@ input {
       font-size: 1.111rem;
       line-height: 150%;
       color: var(--absolute-white);
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.1429rem;
+      }
     }
 
     &__position {
       line-height: 150%;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1rem;
+      }
     }
 
     &__link {
@@ -912,6 +1096,11 @@ input {
       border-radius: 8px;
       background-color: var(--grey-15);
       transition: border-color 0.3s, color 0.3s;
+
+      @media screen and (max-width: $bp-tablet) {
+        padding: 1rem 1.1429rem;
+        line-height: 136%;
+      }
 
       &:hover {
         &:hover {
@@ -944,6 +1133,10 @@ input {
     border-right: 1px solid var(--grey-15);
     border-bottom: 1px solid var(--grey-15);
 
+    @media screen and (max-width: $bp-tablet) {
+      padding: 4.2857rem 0 4.2857rem;
+    }
+
     &.right {
       border-left: none;
     }
@@ -953,6 +1146,10 @@ input {
     padding: 1.611rem 2.778rem 1.667rem 2.778rem;
     border-top: 1px solid var(--grey-15);
     cursor: pointer;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 1.6429rem 2.8571rem 1.7143rem 2.8571rem;
+    }
 
     &.last {
       border-bottom: 1px solid var(--grey-15);
@@ -964,18 +1161,34 @@ input {
       align-items: center;
       justify-content: space-between;
       gap: 0.667rem;
+
+      & .icon {
+        @media screen and (max-width: $bp-tablet) {
+          width: 1.8571rem;
+          height: 1.8571rem;
+        }
+      }
     }
 
     &__title-container {
       display: flex;
       align-items: center;
       gap: 1.667rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        gap: 2.1429rem;
+      }
     }
 
     &__number-container {
       padding: 1.111rem;
       border-radius: 12px;
       background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+
+      @media screen and (max-width: $bp-tablet) {
+        padding: 1.1429rem;
+        border-radius: 0.5714rem;
+      }
     }
 
     &__number {
@@ -987,6 +1200,13 @@ input {
       line-height: 150%;
       color: var(--absolute-white);
       transition: color 0.3s;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.7143rem;
+        width: 2.1429rem;
+        height: 2.1429rem;
+        line-height: normal;
+      }
     }
 
     &:hover .questions-section__card__number {
@@ -1000,6 +1220,10 @@ input {
       line-height: 150%;
       color: var(--absolute-white);
       transition: color 0.3s;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.2857rem;
+      }
     }
 
     &:hover .questions-section__card__title {
@@ -1025,6 +1249,11 @@ input {
       height: 0;
       overflow: hidden;
       transition: height 0.4s ease;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 1.1429rem;
+        padding-left: 6.5714rem;
+      }
     }
   }
 }
@@ -1035,26 +1264,51 @@ input {
     background-image: url('../images/section-header-bg-big.png');
 
     &::before {
-      height: 33.167rem;
       background-image: url('../images/thank-section-bg2.png');
     }
   }
+
   &__img {
     width: 4.444rem;
     height: 4.444rem;
     margin: 0 auto 2.778rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      width: 4.2857rem;
+      height: 4.2857rem;
+      margin: 0 auto 2.8571rem;
+    }
   }
 
   & .section-header__title {
     font-size: 2.111rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 2.1429rem;
+    }
   }
 
   & .section-header__text {
     margin-bottom: 2.778rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      max-width: 55.7143rem;
+      margin: 0 auto 2.8571rem;
+    }
+  }
+
+  &__br-dektop {
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
   }
 
   &__button {
     padding: 0.9444rem 1.8333rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 0.9286rem 1.6429rem;
+    }
   }
 
   &__second-container {
