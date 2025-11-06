@@ -155,13 +155,19 @@ input {
   margin: 0 auto;
   padding: 0 1.333rem;
 
+  &.hero-section-mobile {
+    @media screen and (max-width: $bp-mobile) {
+      padding: 0;
+    }
+  }
+
   @media screen and (max-width: $bp-tablet) {
     max-width: 93.1429rem;
     padding: 0 0.8571rem;
   }
 
   @media screen and (max-width: $bp-mobile) {
-    padding: 0 0;
+    padding: 0 1.1429rem;
   }
 }
 
@@ -602,7 +608,7 @@ input {
   }
 
   @media screen and (max-width: $bp-mobile) {
-    padding: 2.8571rem 1.1429rem 1.4286rem;
+    padding: 2.8571rem 0 1.4286rem;
   }
 
   &__container {
@@ -700,7 +706,7 @@ input {
 .mobile-menu {
   position: fixed;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
@@ -749,16 +755,44 @@ input {
 /*hero-section*/
 .hero-section {
   &__first-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 6.222rem 0 15.222rem 0;
-    background-image: url('../images/hero-section-bg.png');
-    background-position: center center;
+    background-image: url('../images/hero-section-bg1.png');
+    overflow: hidden;
 
     @media screen and (max-width: $bp-tablet) {
-      background-size: 91.4286rem 100%;
       padding: 8rem 0 19.5714rem 0;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      padding: 5.7143rem 1.1429rem 14.6429rem;
+      border-left: none;
+      border-right: none;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      width: 87.3889rem;
+      height: 24.8889rem;
+      background-size: 100% 100%;
+      background-image: url('../images/hero-section-bg2.png');
+
+      @media screen and (max-width: $bp-tablet) {
+        bottom: -0.9286rem;
+        width: 99.5rem;
+        height: 28.7143rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        bottom: 0;
+        width: 61.3571rem;
+        height: 17.7143rem;
+      }
     }
   }
 
@@ -773,6 +807,12 @@ input {
     @media screen and (max-width: $bp-tablet) {
       font-size: 3.4286rem;
       max-width: 35.8571rem;
+      margin-bottom: 2.1429rem;
+    }
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 2.4286rem;
+      max-width: 25.5714rem;
       margin-bottom: 2.1429rem;
     }
   }
@@ -792,6 +832,16 @@ input {
       padding: 1.7857rem 2.1429rem;
       margin-bottom: 2.8571rem;
     }
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 1.1429rem;
+      line-height: 150%;
+      padding: 1.2857rem 1.4286rem;
+
+      & p {
+        text-align: center;
+      }
+    }
   }
 
   &__accented-text {
@@ -803,9 +853,19 @@ input {
     @media screen and (max-width: $bp-tablet) {
       padding: 0.5714rem 0.7143rem;
     }
+
+    @media screen and (max-width: $bp-mobile) {
+      padding: 0;
+      color: var(--grey-60);
+      background-color: transparent;
+      border-radius: none;
+      text-transform: lowercase;
+    }
   }
 
   &__buttons-container {
+    position: relative;
+    z-index: 1;
     display: flex;
     gap: 0.722rem;
 
