@@ -551,6 +551,10 @@ input {
     padding: 7.1429rem 0;
   }
 
+  @media screen and (max-width: $bp-mobile) {
+    padding: 3.5714rem 0;
+  }
+
   &::before {
     position: absolute;
     z-index: -1;
@@ -573,8 +577,20 @@ input {
       margin-bottom: 0.7143rem;
     }
 
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 2rem;
+      margin-bottom: 0.4286rem;
+    }
+
     &.smaller-margin {
       margin-bottom: 0.556rem;
+    }
+
+    &.reviews-section {
+      @media screen and (max-width: $bp-mobile) {
+        max-width: 23.2857rem;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -587,13 +603,28 @@ input {
       line-height: 150%;
     }
 
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 1rem;
+      line-height: 171%;
+      max-width: 23.2857rem;
+      margin: 0 auto;
+    }
+
     &.higher {
       line-height: 150%;
+
+      @media screen and (max-width: $bp-mobile) {
+        line-height: 171%;
+      }
     }
 
     &.thinner {
       max-width: 57.1429rem;
       margin: 0 auto;
+
+      @media screen and (max-width: $bp-mobile) {
+        max-width: 22.2857rem;
+      }
     }
   }
 }
@@ -983,6 +1014,10 @@ input {
     display: flex;
     flex-direction: row;
 
+    @media screen and (max-width: $bp-mobile) {
+      flex-direction: column;
+    }
+
     & li {
       min-height: 32.056rem;
       width: 100%;
@@ -990,6 +1025,12 @@ input {
 
       @media screen and (max-width: $bp-tablet) {
         min-height: 36.4286rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        border-right: 0;
+        border-bottom: 1px solid var(--grey-15);
+        min-height: unset;
       }
 
       &:last-child {
@@ -1012,6 +1053,28 @@ input {
       padding: 2.8571rem;
     }
 
+    @media screen and (max-width: $bp-mobile) {
+      padding: 2.1429rem;
+      gap: 1.7143rem;
+    }
+
+    &__icon-and-title-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.111rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        margin-bottom: 1rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1.7143rem;
+      }
+    }
+
     &__img {
       margin-bottom: 2.222rem;
       width: 4.889rem;
@@ -1022,10 +1085,15 @@ input {
         width: 5rem;
         height: 5rem;
       }
+
+      @media screen and (max-width: $bp-mobile) {
+        margin-bottom: 0;
+        width: 4.1429rem;
+        height: 4.1429rem;
+      }
     }
 
     &__title {
-      margin-bottom: 1.111rem;
       font-weight: 600;
       font-size: 1.667rem;
       line-height: 150%;
@@ -1033,7 +1101,10 @@ input {
 
       @media screen and (max-width: $bp-tablet) {
         font-size: 1.7143rem;
-        margin-bottom: 1rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        font-size: 1.4286rem;
       }
     }
 
@@ -1044,6 +1115,11 @@ input {
         max-width: 28.5714rem;
         line-height: 150%;
         font-size: 1.1429rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        font-size: 1rem;
+        max-width: unset;
       }
     }
 
@@ -1083,7 +1159,11 @@ input {
 
   &__second-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35.528rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: $bp-mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
@@ -1094,12 +1174,20 @@ input {
       padding: 4.2857rem;
     }
 
+    @media screen and (max-width: $bp-mobile) {
+      padding: 2.8571rem 2.1429rem;
+    }
+
     &:nth-child(odd) {
       border-left: 1px solid var(--grey-15);
       border-right: 1px solid var(--grey-15);
     }
     &:nth-child(even) {
       border-right: 1px solid var(--grey-15);
+
+      @media screen and (max-width: $bp-mobile) {
+        border-left: 1px solid var(--grey-15);
+      }
     }
 
     &__logo-container {
@@ -1110,6 +1198,11 @@ input {
 
       @media screen and (max-width: $bp-tablet) {
         margin-bottom: 2.1429rem;
+        gap: 1rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        margin-bottom: 1.7143rem;
       }
     }
 
@@ -1117,6 +1210,11 @@ input {
       @media screen and (max-width: $bp-tablet) {
         width: 5rem;
         height: 5rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        width: 4.1429rem;
+        height: 4.1429rem;
       }
     }
 
@@ -1140,6 +1238,11 @@ input {
 
       @media screen and (max-width: $bp-tablet) {
         font-size: 1.1429rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        font-size: 1rem;
+        max-width: unset;
       }
     }
   }
@@ -1170,7 +1273,11 @@ input {
 
   &__second-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35.556rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (max-width: $bp-mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {
@@ -1186,12 +1293,21 @@ input {
       gap: 2.1429rem;
     }
 
+    @media screen and (max-width: $bp-mobile) {
+      padding: 2.8571rem 1.7143rem;
+      gap: 1.7143rem;
+    }
+
     &:nth-child(odd) {
       border-left: 1px solid var(--grey-15);
       border-right: 1px solid var(--grey-15);
     }
     &:nth-child(even) {
       border-right: 1px solid var(--grey-15);
+
+      @media screen and (max-width: $bp-mobile) {
+        border-left: 1px solid var(--grey-15);
+      }
     }
 
     &__title {
@@ -1205,6 +1321,10 @@ input {
         font-size: 1.4286rem;
         margin-bottom: 1.4286rem;
       }
+
+      @media screen and (max-width: $bp-mobile) {
+        font-size: 1.2857rem;
+      }
     }
 
     &__text {
@@ -1212,6 +1332,10 @@ input {
 
       @media screen and (max-width: $bp-tablet) {
         font-size: 1.1429rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        font-size: 1rem;
       }
     }
 
@@ -1233,9 +1357,14 @@ input {
         > div {
           display: flex;
           gap: 1rem;
+          align-items: center;
 
           @media screen and (max-width: $bp-tablet) {
             gap: 0.8571rem;
+          }
+
+          @media screen and (max-width: $bp-mobile) {
+            gap: 0.7143rem;
           }
         }
       }
@@ -1248,6 +1377,11 @@ input {
       @media screen and (max-width: $bp-tablet) {
         width: 3.5714rem;
         height: 3.5714rem;
+      }
+
+      @media screen and (max-width: $bp-mobile) {
+        width: 2.8571rem;
+        height: 2.8571rem;
       }
     }
 
@@ -1283,6 +1417,10 @@ input {
       @media screen and (max-width: $bp-tablet) {
         padding: 1rem 1.1429rem;
         line-height: 136%;
+      }
+
+      @media screen and (max-width: 1110px) {
+        display: none;
       }
 
       &:hover {
@@ -1622,6 +1760,7 @@ input {
 
     & li {
       display: flex;
+      align-items: center;
       gap: 0.5556rem;
 
       @media screen and (max-width: $bp-tablet) {
